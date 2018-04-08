@@ -4,5 +4,5 @@ AJAXWebComponents is currently in development.  The goal of this project is to d
 
 LIST OF CURRENT COMPONENTS BEING DEVELOPED
 
-1. InteractiveTextBox
+1. InteractiveTextBox - (See file: Documentation-InteractiveTextBox)
 2. (New Components will be added in the future)
