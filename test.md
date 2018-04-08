@@ -19,9 +19,18 @@ fetch data asynchronously.
 
 ## Example usage
 
-var interactiveTB = new InteractiveTextBox(string textFieldID, string autoCompleteContainerID, object {options});
+var interactiveTB = new InteractiveTextBox( PARAM1, PARAM2, OBJECT { } );
 
 ## Input Values
+
+### Required Input Values
+
+|PARAMETER NAME      |  DATATYPE         |  DESCRIPTION    |
+|--------------------|-------------------|-----------------|
+|PARAM1              |  String           | PARAM1 is a String variable to contain the ID of the input text field associated with the component.
+|PARAM2              |  String           | PARAM2 is a String variable to contain the ID of the DIV container that acts as the input text fields drop down auto complete.
+|OBJECT              |  Object           | The third variable is a javascript object.  There are a number of options that can be supplied to the InteractiveTextBox through this variable.  Some are compulsory and some are optional.  A full list of compulsory and optional key : value pairs can be found below.
+
 
 String: textFieldID - The ID of the input text field associated with the component.
 String: autoCompleteContainerID - The ID of the DOM element that will contain matching results.
