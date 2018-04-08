@@ -33,15 +33,15 @@ The table below describes the input parameters to the InteractiveTextBox.  All t
 
 ### Compulssory options for third parameter OBJECT
 
-|DATATYPE      |  KEYNAME         |  DEFAULT                     |  AVAILABLE_VALUES        |  DESCRIPTIONS                           |
+|DATATYPE      |  KEYNAME         |  DEFAULT                     |  POSSIBLE VALUES         |  DESCRIPTIONS                           |
 |--------------|------------------|------------------------------|--------------------------|-----------------------------------------|
-|String:       |  defaultValue    |  "Search For..."             |  DEFAULT,"<any>"         |  Default value displayed in text field
-|String:       |  noErrorClass    |  "dropDownItemContainer"     |  DEFAULT,"<any>"         |  CSS dropdown style for matched data    
-|String:       |  errorClass      |  "dropDownItemContainerError"|  DEFAULT,"<any>"         |  CSS dropdown style for no data error  message
-|String:       |  dataSource      |  "ARRAY"                     |  DEFAULT,"AJAX"          |  method for retrieving data for drop    down
-|Array:        |  dataArray       |  null                        |  DEFAULT,Array           |  used to supply data as Array (used  with dataSource 'ARRAY' MODE
-|Object:       |  AMCREF          |  null                        |  DEFAULT,Object          |  AMCREF (AJAXManagerClientReference)    points to instance of AJAXManagerClient.  Used with dataSource 'AJAX' MODE
-|Object.Method |  AMCAPI          |  null                        |  DEFAULT,Object.Method   |  AMCAPI (AJAXManagerClient)(API) points to method of instance of AJAXManagerClient that accepts new AJAX requests from components.  Used with dataSource 'AJAX' MODE
-|Integer:      |  searchDelay     |  350                         |  DEFAULT,0-65535         |  Creates a delay between key presses.  Most useful when used in 'AJAX' MODE.  Having a delay means that every key press isn't sent as a new AJAX request.  If set to 0 every key press will cause a new AJAX request sent.  350 (0.35 of a second) recommended.
-|String:       |  AJAXURL         |  ""                          |  DEFAULT,"<URLForAJAX>"  |  When using dataSource 'AJAX' MODE   this is where the file that processes the AJAX request can be specified.
-|String:       |  AJAXFetchMethod |  "GET"                       |  DEFAULT,"POST"          |  When using dataSource 'AJAX' MODE     here is where the request mode type.  Either "GET" or "POST" can be used.
+|String:       |  defaultValue    |  "Search For..."             |  DEFAULT, "<any>"         |  Default value displayed in text field
+|String:       |  noErrorClass    |  "dropDownItemContainer"     |  DEFAULT, "<any>"         |  CSS dropdown style for matched data    
+|String:       |  errorClass      |  "dropDownItemContainerError"|  DEFAULT, "<any>"         |  CSS dropdown style for no data error  message
+|String:       |  dataSource      |  "ARRAY"                     |  DEFAULT, "AJAX"          |  method for retrieving data for drop    down
+|Array:        |  dataArray       |  null                        |  DEFAULT, Array           |  used to supply data as Array (used  with dataSource 'ARRAY' MODE
+|Object:       |  AMCREF          |  null                        |  DEFAULT, Object          |  AMCREF (AJAXManagerClientReference)    points to instance of AJAXManagerClient.  Used with dataSource 'AJAX' MODE
+|Object.Method |  AMCAPI          |  null                        |  DEFAULT, Object.Method   |  AMCAPI (AJAXManagerClient)(API) points to method of instance of AJAXManagerClient that accepts new AJAX requests from components.  Used with dataSource 'AJAX' MODE
+|Integer:      |  searchDelay     |  350                         |  DEFAULT, 0-65535         |  Creates a delay between key presses.  Most useful when used in 'AJAX' MODE.  Having a delay means that every key press isn't sent as a new AJAX request.  If set to 0 every key press will cause a new AJAX request sent.  350 (0.35 of a second) recommended.
+|String:       |  AJAXURL         |  ""                          |  DEFAULT, "<URLForAJAX>"  |  When using dataSource 'AJAX' MODE   this is where the file that processes the AJAX request can be specified.
+|String:       |  AJAXFetchMethod |  "GET"                       |  DEFAULT, "POST"          |  When using dataSource 'AJAX' MODE     here is where the request mode type.  Either "GET" or "POST" can be used.
