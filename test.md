@@ -22,7 +22,7 @@ Example instantiation and initialisation of a new InterativeTextBox Object:-
 
 var interactiveTB = new InteractiveTextBox(string textFieldID, string autoCompleteContainerID, object {options});
 
-##h3 Input values
+## Input Values
 
 String: textFieldID - The ID of the input text field associated with the component.
 String: autoCompleteContainerID - The ID of the DOM element that will contain matching results.
