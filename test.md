@@ -17,6 +17,8 @@ mode InteractiveTextBox will use a set of data that is fetched using an AJAX cal
 designed to utilise the AJAX features of AJAXManager repository to handle all the intricacies that come with using AJAX techniques to
 fetch data asynchronously.
 
+## Example usage
+
 InteractiveTextBox - Input values described.
 Example instantiation and initialisation of a new InterativeTextBox Object:-
 
