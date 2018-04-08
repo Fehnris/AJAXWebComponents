@@ -1,6 +1,6 @@
-#InteractiveTextBox Component
+# InteractiveTextBox Component
 
-DESCRIPTION
+## DESCRIPTION
 
 The InteractiveTextBox library is a javascript class that offers web designers a simple way to add functionality features to a HTML
 input text field.  At present InteractiveTextBox provides the designer with a way to have a default text field value that is displayed
