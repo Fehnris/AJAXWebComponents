@@ -19,9 +19,6 @@ fetch data asynchronously.
 
 ## Example usage
 
-InteractiveTextBox - Input values described.
-Example instantiation and initialisation of a new InterativeTextBox Object:-
-
 var interactiveTB = new InteractiveTextBox(string textFieldID, string autoCompleteContainerID, object {options});
 
 ## Input Values
