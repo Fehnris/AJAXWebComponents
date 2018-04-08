@@ -36,4 +36,4 @@ String:         AJAXURL           ""                            DEFAULT,"<URLFor
                                                                                           request can be specified.
 String:         AJAXFetchMethod   "GET"                         DEFAULT,"POST"            When using dataSource 'AJAX' MODE here is
                                                                                           where the request mode type can be specified.
-                                                                                          Either "GET" or "POST".
+                                                                                          Either "GET" or "POST" can be used.
