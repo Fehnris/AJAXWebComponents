@@ -23,7 +23,7 @@ var interactiveTB = new InteractiveTextBox( PARAM1, PARAM2, OBJECT { } );
 
 ## Input Values
 
-### Required Input Values
+The table below describes the input parameters to the InteractiveTextBox.  All three are required.
 
 |PARAMETER NAME      |  DATATYPE         |  DESCRIPTION    |
 |--------------------|-------------------|-----------------|
@@ -31,11 +31,7 @@ var interactiveTB = new InteractiveTextBox( PARAM1, PARAM2, OBJECT { } );
 |PARAM2              |  String           | PARAM2 is a String variable to contain the ID of the DIV container that acts as the input text fields drop down auto complete.
 |OBJECT              |  Object           | The third variable is a javascript object.  There are a number of options that can be supplied to the InteractiveTextBox through this variable.  Some are compulsory and some are optional.  A full list of compulsory and optional key : value pairs can be found below.
 
-
-String: textFieldID - The ID of the input text field associated with the component.
-String: autoCompleteContainerID - The ID of the DOM element that will contain matching results.
-Object: {options} - Contains list of 'key' : 'value' pair optional settings.  See list below for a breakdown of possible options.
-
+### Compulssory options for third parameter OBJECT
 
 |DATATYPE      |  KEYNAME         |  DEFAULT                     |  AVAILABLE_VALUES        |  DESCRIPTIONS                           |
 |--------------|------------------|------------------------------|--------------------------|-----------------------------------------|
