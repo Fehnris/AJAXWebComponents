@@ -36,8 +36,8 @@ The table below describes the input parameters to the InteractiveTextBox.  All t
 |DATATYPE      |  KEYNAME         |  DEFAULT                     |  POSSIBLE VALUES         |  DESCRIPTIONS                           |
 |--------------|------------------|------------------------------|--------------------------|-----------------------------------------|
 |String:       |  defaultValue    |  "Search For..."             |  DEFAULT, "<any>"         |  Default value displayed in text field
-|String:       |  noErrorClass    |  "dropDownItemContainer"     |  DEFAULT, "<any>"         |  CSS dropdown style for matched data    
-|String:       |  errorClass      |  "dropDownItemContainerError"|  DEFAULT, "<any>"         |  CSS dropdown style for no data error  message
+|String:       |  noErrorClass    |  "acItem"     |  DEFAULT, "<any>"         |  CSS dropdown style for matched data    
+|String:       |  errorClass      |  "acItemErr"  |  DEFAULT, "<any>"         |  CSS dropdown style for no data error  message
 |String:       |  dataSource      |  "ARRAY"                     |  DEFAULT, "AJAX"          |  method for retrieving data for drop    down
 |Array:        |  dataArray       |  null                        |  DEFAULT, Array           |  used to supply data as Array (used  with dataSource 'ARRAY' MODE
 |Object:       |  AMCREF          |  null                        |  DEFAULT, Object          |  AMCREF (AJAXManagerClientReference)    points to instance of AJAXManagerClient.  Used with dataSource 'AJAX' MODE
