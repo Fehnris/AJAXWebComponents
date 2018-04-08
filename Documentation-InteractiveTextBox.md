@@ -1,4 +1,4 @@
-InteractiveTextBox Component
+#InteractiveTextBox Component
 
 DESCRIPTION
 
