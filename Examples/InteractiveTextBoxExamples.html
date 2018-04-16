@@ -1,8 +1,12 @@
 <html>
 	<head>
 		<script>
+			//Array containing choices that will show in the text field dropdown.  Relevant choices will show dependant on what is typed.
 			var choicesArray = ["alpha", "beta", "bravo", "car", "carrot", "cannon"];
-			newTB = new InteractiveTextBox("textFieldID", "textFieldACID", { 'dataArray' : choicesArray, 'searchDelay' : 0 });
+			
+			//declaring a new InteractiveTextBox that is linked to the HTML input text field 'textFieldID'.
+			//This example is working in ARRAY mode where the text field's autocomplete is populated from a local Array.
+			var newTB = new InteractiveTextBox("textFieldID", "textFieldACID", { 'dataArray' : choicesArray, 'searchDelay' : 0 });
 		</script>
 	</head>
 	<body>
