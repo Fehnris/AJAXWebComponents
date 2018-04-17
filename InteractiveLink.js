@@ -1,4 +1,4 @@
-function LinkObject(linkObjectID, options) {
+function InteractiveLink(linkObjectID, options) {
 	this.optionDefaults = { 'destinationID' : "", 'DATAFORMATREF' : null, 'DATAFORMATAPI' : null, 'AMCREF' : null,
 						    'searchTerm' : "", 'clickLock' : false,
 						    'AMCAPI' : null, 'searchDelay' : 350, 'AJAXURL' : "", 'AJAXFetchMethod' : "GET" };
