@@ -44,7 +44,7 @@ The table below describes the input parameters to the InteractiveTextBox.  All t
 |Object.Method |  AMCAPI          |  null                        |  DEFAULT, Object.Method   |  AMCAPI (AJAXManagerClient)(API) points to method of instance of AJAXManagerClient that accepts new AJAX requests from components.  Used with dataSource 'AJAX' MODE
 |Integer:      |  searchDelay     |  350                         |  DEFAULT, 0-65535         |  Creates a delay between key presses.  Most useful when used in 'AJAX' MODE.  Having a delay means that every key press isn't sent as a new AJAX request.  If set to 0 every key press will cause a new AJAX request sent.  350 (0.35 of a second) recommended.
 |String:       |  AJAXURL         |  ""                          |  DEFAULT, "<URLForAJAX>"  |  When using dataSource 'AJAX' MODE   this is where the file that processes the AJAX request can be specified.
-|String:       |  AJAXFetchMethod |  "GET"                       |  DEFAULT, "POST"          |  When using dataSource 'AJAX' MODE     here is where the request mode type.  Either "GET" or "POST" can be used.
+|String:       |  AJAXFetchMethod |  "GET"                       |  DEFAULT, "POST"          |  When using dataSource 'AJAX' MODE     here is where the request mode can be specified.  Either "GET" or "POST" can be used.
 
 ### Optional options for third parameter OBJECT
 
