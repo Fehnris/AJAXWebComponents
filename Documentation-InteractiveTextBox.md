@@ -28,7 +28,7 @@ The table below describes the input parameters to the InteractiveTextBox.  All t
 |PARAMETER NAME      |  DATATYPE         |  DESCRIPTION    |
 |--------------------|-------------------|-----------------|
 |PARAM1              |  String           | PARAM1 is a String variable to contain the ID of the input text field associated with the component.
-|PARAM2              |  String           | PARAM2 is a String variable to contain the ID of the DIV container that acts as the input text fields drop down auto complete.
+|PARAM2              |  String           | PARAM2 is a String variable to contain the ID of the HTML container that acts as the input text fields drop down auto complete.
 |OBJECT              |  Object           | The third variable is a javascript object.  There are a number of options that can be supplied to the InteractiveTextBox through this variable.  Some are compulsory and some are optional.  A full list of compulsory and optional key : value pairs can be found below.
 
 ### Compulsory options for third parameter OBJECT
