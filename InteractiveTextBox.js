@@ -54,7 +54,6 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		var str = "";
 		for(var prop in obj) {
 			str += "[" + prop + "]:" + obj[prop] + "\n";
-		
 		}
 		return str;
 	}
@@ -66,20 +65,24 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		}
 	}
 	
-	this.populateAutoComplete = function(data, dataError, valueSearched) {
+	this.populateAutoComplete = function(AJAX, valueSearched) {
 		var tb = window.document.getElementById(this.properties['textBoxID']);
 		var ac = window.document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
-		valueSearched == "" ? itemArray = [] : itemArray = data.split("+");
-		if(dataError !== true) {
+		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
+		if(AJAX.ERRORS !== true) {
 			if(itemArray.length == 1 && itemArray[0] == "") {
 				itemArray[0] = "No Results Matching Searched Value ' " + valueSearched + " '";
-				dataError = true;
+				AJAX.ERRORS = true;
 			}
 			else {
 				itemClass = this.properties['noErrorClass'];
 			}
+		}
+		else {
+			itemArray[0] = AJAX.ERROR[AJAX.ERROR.length - 1].MESSAGE;
+			AJAX.ERRORS = true;
 		}
 		$("#" + ac.id).hide();
 		ac.innerHTML = "";
@@ -89,7 +92,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 				menuItem.setAttribute("id", ac.id + i);
 				menuItem.setAttribute("class", itemClass);
 				menuItem.innerHTML = itemArray[i];
-				if(dataError !== true) {
+				if(AJAX.ERRORS !== true) {
 					menuItem.addEventListener("click", function() {
 						tb.value = this.innerHTML;
 						$("#" + ac.id).hide();

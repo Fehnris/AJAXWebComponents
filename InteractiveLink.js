@@ -42,20 +42,28 @@ function InteractiveLink(linkObjectID, options) {
 		}
 	}
 	
-	this.postFormatting = function(data, dataError, valueSearched) {
+	this.postFormatting = function(AJAX, valueSearched) {
 		//alert(that.properties["DATAFORMATREF"]);
 		if(that.properties["DATAFORMATREF"] == null) {
 			if(that.properties["destinationID"] !== "") {
-				that.properties["destinationID"] = data;
+				var content = "";
+				if(AJAX.ERRORS == true) {
+					for(i = 0; i < AJAX.ERROR.length; i++) {
+						content += AJAX.ERROR[AJAX.ERROR[i]].LAYER + AJAX.ERROR[AJAX.ERROR[i]].MESSAGE;
+					}
+				}
+				else {
+					content = (AJAX.DATA.TYPE == "Object") ? JSON.stringify(AJAX.DATA.VALUE) : AJAX.DATA.VALUE;
+				}
+				that.properties["destinationID"] = content;
 			}
 		}
 		else {
 			
 			if(that.properties["DATAFORMATREF"] !== null) {
-				that.properties["DATAFORMATAPI"].call(that.properties["DATAFORMATREF"], data, { 'callingObjectID' : that.properties["linkObjectID"],
-																							    'dataError' : dataError,
+				that.properties["DATAFORMATAPI"].call(that.properties["DATAFORMATREF"], AJAX, { 'callingObjectID' : that.properties["linkObjectID"],
 																							    'valueSearched' : valueSearched });
 			}
 		}
 	}
-}
+}     
