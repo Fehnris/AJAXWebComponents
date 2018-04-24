@@ -11,4 +11,4 @@ AJAXWebComponents is currently in development.  The goal of this project is to d
 AJAXWebComponents is being developed along side several repositories all designed to complement and work seemlessly together.  
 #### AJAXManager:-
 AJAXManager repository contains 2 libraries namely AJAXManagerClient and AJAXManagerServer.  These libraries can be used in conjunction along side AJAXWebComponents to provide AJAX functionality.  AJAXManagerClient provides all neccessary client side AJAX functionality to each component so each component need not be concerned with the intricacities of AJAX and can have a uniformed API for fetching data.
-AJAXManagerServer library acts as the receiving end of AJAXManagerClient and provides the server side of AJAX functionality.  This repository is being designed along side AJAXManagerClient to provide seemless AJAX transactions without the need to know all the intricacities of AJAX.
+AJAXManagerServer library acts as the receiving end of AJAXManagerClient and provides the server side of AJAX functionality.
