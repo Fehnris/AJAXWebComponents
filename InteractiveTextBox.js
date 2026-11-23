@@ -7,12 +7,12 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 	//alert(alertProperties(options));
 	initialiseOptions(options);
 	//alert(alertProperties(this.properties));
-	window.document.getElementById(that.properties['textBoxID']).value = this.properties["defaultValue"];
+	document.getElementById(that.properties['textBoxID']).value = this.properties["defaultValue"];
 	addEvents();
 	
 	function addEvents() {
-		var tb = window.document.getElementById(that.properties['textBoxID']);
-		var ac = window.document.getElementById(that.properties['autoCompleteContainerID']);
+		var tb = document.getElementById(that.properties['textBoxID']);
+		var ac = document.getElementById(that.properties['autoCompleteContainerID']);
 		tb.onfocus = function() {
 			if(this.value == that.properties['defaultValue']) {
 				this.value = "";
@@ -27,9 +27,9 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		tb.onkeyup = function() {
 			var strVal = this.value;
 			if (timer) {
-				window.clearTimeout(timer);
+				clearTimeout(timer);
 			}
-			timer = window.setTimeout( function() {
+			timer = setTimeout( function() {
 				timer = null;
 				if(that.properties["dataSource"] == "AJAX") {
 					that.properties["AMCAPI"].call(that.properties["AMCREF"], { 'URL' : that.properties["AJAXURL"], 'QUERY' : strVal, 'METHOD' : "GET" }, that.populateAutoComplete, that); // { 'URL' : that.properties["AJAXURL"], 'QUERY' : strVal }, this.populateAutoComplete
@@ -66,8 +66,8 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 	}
 	
 	this.populateAutoComplete = function(AJAX, valueSearched) {
-		var tb = window.document.getElementById(this.properties['textBoxID']);
-		var ac = window.document.getElementById(this.properties['autoCompleteContainerID']);
+		var tb = document.getElementById(this.properties['textBoxID']);
+		var ac = document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
 		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
@@ -84,11 +84,11 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 			itemArray[0] = AJAX.ERROR[AJAX.ERROR.length - 1].MESSAGE;
 			AJAX.ERRORS = true;
 		}
-		$("#" + ac.id).hide();
+		document.getElementById(ac.id).style.display = 'none';
 		ac.innerHTML = "";
 		if(itemArray.length > 0) {
 			for (var i = 0; i < itemArray.length; i++) {
-				var menuItem = window.document.createElement("div");
+				var menuItem = document.createElement("div");
 				menuItem.setAttribute("id", ac.id + i);
 				menuItem.setAttribute("class", itemClass);
 				menuItem.innerHTML = itemArray[i];
@@ -101,7 +101,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 				}
 				ac.appendChild(menuItem);
 			}
-			$("#" + ac.id).show();
+			document.getElementById(ac.id).style.display = '';
 		}
 	}
 }
