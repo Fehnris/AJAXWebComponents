@@ -96,7 +96,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 				if(AJAX.ERRORS !== true) {
 					menuItem.addEventListener("click", function() {
 						tb.value = this.innerHTML;
-						$("#" + ac.id).hide();
+						document.getElementById(ac.id).style.display = 'none';
 						ac.innerHTML = "";
 					});
 				}
