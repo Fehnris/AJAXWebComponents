@@ -8,7 +8,7 @@ function InteractiveSearchButton(buttonID, options) {
 	initialiseOptions(options);
 	//alert(alertProperties(this.properties));
 	addEvents();
-	//run forest run
+	//run forest run!!!!!!!!!!!!!!!!!!!!!!!!
 	
 	function addEvents() {
 		var b = window.document.getElementById(that.properties['buttonID']);
