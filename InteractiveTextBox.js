@@ -7,7 +7,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 	//alert(alertProperties(options));
 	initialiseOptions(options);
 	//alert(alertProperties(this.properties));
-	//run forest run says Jenny!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//run forest run bad legs
 	document.getElementById(that.properties['textBoxID']).value = this.properties["defaultValue"];
 	addEvents();
 	
