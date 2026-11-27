@@ -102,6 +102,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 				}
 				ac.appendChild(menuItem);
 			}
+			alert(itemArray);
 			document.getElementById(ac.id).style.display = '';
 		}
 	}
