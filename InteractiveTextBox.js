@@ -71,6 +71,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		var ac = document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
+		alert(AJAX);
 		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
 		if(AJAX.ERRORS !== true) {
 			if(itemArray.length == 1 && itemArray[0] == "") {
@@ -102,7 +103,6 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 				}
 				ac.appendChild(menuItem);
 			}
-			alert(itemArray);
 			document.getElementById(ac.id).style.display = '';
 		}
 	}
