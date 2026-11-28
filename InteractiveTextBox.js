@@ -71,6 +71,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		var ac = document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
+		document.getElementById(ac.id).classList.add('hidden');
 		alert(AJAX.ERROR[0].MESSAGE);
 		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
 		if(AJAX.ERRORS !== true) {
@@ -86,7 +87,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 			itemArray[0] = AJAX.ERROR[AJAX.ERROR.length - 1].MESSAGE;
 			AJAX.ERRORS = true;
 		}
-		document.getElementById(ac.id).style.display = 'none';
+		//document.getElementById(ac.id).classList.remove('hidden');
 		ac.innerHTML = "";
 		if(itemArray.length > 0) {
 			for (var i = 0; i < itemArray.length; i++) {
@@ -97,13 +98,14 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 				if(AJAX.ERRORS !== true) {
 					menuItem.addEventListener("click", function() {
 						tb.value = this.innerHTML;
-						document.getElementById(ac.id).style.display = 'none';
+						//document.getElementById(ac.id).style.display = 'none';
+						document.getElementById(ac.id).classList.add('hidden');
 						ac.innerHTML = "";
 					});
 				}
 				ac.appendChild(menuItem);
 			}
-			document.getElementById(ac.id).style.display = '';
+			document.getElementById(ac.id).classList.remove('hidden');
 		}
 	}
 }
