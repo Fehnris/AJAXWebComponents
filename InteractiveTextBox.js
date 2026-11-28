@@ -71,8 +71,8 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		const ac = document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
-		ac.classList.add('hidden');
-		alert(AJAX.ERROR[0].MESSAGE);
+		
+		//alert(AJAX.ERROR[0].MESSAGE);
 		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
 		if(AJAX.ERRORS !== true) {
 			if(itemArray.length == 1 && itemArray[0] == "") {
@@ -87,7 +87,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 			itemArray[0] = AJAX.ERROR[AJAX.ERROR.length - 1].MESSAGE;
 			AJAX.ERRORS = true;
 		}
-		//document.getElementById(ac.id).classList.remove('hidden');
+		ac.classList.add('hidden');
 		ac.innerHTML = "";
 		if(itemArray.length > 0) {
 			for (var i = 0; i < itemArray.length; i++) {
