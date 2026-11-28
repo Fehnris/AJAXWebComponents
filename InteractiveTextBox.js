@@ -71,7 +71,7 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 		var ac = document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
-		document.getElementById(ac.id).classList.add('hidden');
+		//document.getElementById(ac.id).classList.add('hidden');
 		alert(AJAX.ERROR[0].MESSAGE);
 		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
 		if(AJAX.ERRORS !== true) {
