@@ -12,8 +12,8 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 	addEvents();
 	
 	function addEvents() {
-		const tb = document.getElementById(that.properties['textBoxID']);
-		const ac = document.getElementById(that.properties['autoCompleteContainerID']);
+		var tb = document.getElementById(that.properties['textBoxID']);
+		var ac = document.getElementById(that.properties['autoCompleteContainerID']);
 		tb.onfocus = function() {
 			if(this.value == that.properties['defaultValue']) {
 				this.value = "";
