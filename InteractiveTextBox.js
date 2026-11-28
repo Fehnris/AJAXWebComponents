@@ -67,11 +67,11 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 	}
 	
 	this.populateAutoComplete = function(AJAX, valueSearched) {
-		var tb = document.getElementById(this.properties['textBoxID']);
-		var ac = document.getElementById(this.properties['autoCompleteContainerID']);
+		const tb = document.getElementById(this.properties['textBoxID']);
+		const ac = document.getElementById(this.properties['autoCompleteContainerID']);
 		var itemClass = this.properties['errorClass'];
 		var itemArray;
-		//document.getElementById(ac.id).classList.add('hidden');
+		ac.classList.add('hidden');
 		alert(AJAX.ERROR[0].MESSAGE);
 		valueSearched == "" ? itemArray = [] : itemArray = AJAX.DATA.VALUE.split("+");
 		if(AJAX.ERRORS !== true) {
@@ -99,13 +99,13 @@ function InteractiveTextBox(textBoxID, autoCompleteContainerID, options) {
 					menuItem.addEventListener("click", function() {
 						tb.value = this.innerHTML;
 						//document.getElementById(ac.id).style.display = 'none';
-						document.getElementById(ac.id).classList.add('hidden');
+						ac.classList.add('hidden');
 						ac.innerHTML = "";
 					});
 				}
 				ac.appendChild(menuItem);
 			}
-			document.getElementById(ac.id).classList.remove('hidden');
+			ac.classList.remove('hidden');
 		}
 	}
 }
